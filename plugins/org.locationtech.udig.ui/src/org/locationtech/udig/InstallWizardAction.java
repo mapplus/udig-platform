@@ -16,7 +16,7 @@ import org.eclipse.swt.custom.BusyIndicator;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.IWorkbenchWindowActionDelegate;
 import org.eclipse.ui.PlatformUI;
-//import org.eclipse.update.ui.UpdateManagerUI;
+import org.eclipse.update.ui.UpdateManagerUI;
 
 public class InstallWizardAction implements IWorkbenchWindowActionDelegate {
 
@@ -38,7 +38,7 @@ public class InstallWizardAction implements IWorkbenchWindowActionDelegate {
         BusyIndicator.showWhile(window.getShell().getDisplay(), new Runnable() {
             public void run() {
             	//FIXME Needs to be ported to Luna
-//                UpdateManagerUI.openInstaller(window.getShell());
+                UpdateManagerUI.openInstaller(window.getShell());
             }
         });
     }
